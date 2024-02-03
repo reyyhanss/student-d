@@ -1,0 +1,20 @@
+//take a studnet information
+var ogrenciAdi="Ahmet";
+var soyadi="Yilmaz";
+var adiSoyadi= ogrenciAdi+soyadi;
+var numara="526";
+var tcKimlik="21563148527";
+var cinsiyet="erkek";
+var dogumYili=2003;
+var adres="Denizli Gümüşçay";
+var yasi= 2024 - dogumYili;
+
+Console.WriteLine(ogrenciAdi);
+Console.WriteLine(soyadi);
+Console.WriteLine(adiSoyadi);
+Console.WriteLine(numara);
+Console.WriteLine(tcKimlik);
+Console.WriteLine(cinsiyet);
+Console.WriteLine(dogumYili);
+Console.WriteLine(adres);
+Console.WriteLine(yasi);
