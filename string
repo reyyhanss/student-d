@@ -1,0 +1,12 @@
+/*using string*/
+Console.Write("enter name:");
+var name=Console.ReadLine();
+
+Console.Write("surname: ");
+var surname= Console.ReadLine();
+
+Console.Write("age: ");
+var age= Console.ReadLine();
+
+string message= name +" "+ surname +" " + "this person" +" "+ age+" "+"is years old";
+Console.WriteLine(message);
