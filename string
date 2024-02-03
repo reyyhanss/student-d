@@ -7,6 +7,8 @@ var surname= Console.ReadLine();
 
 Console.Write("age: ");
 var age= Console.ReadLine();
-
-string message= name +" "+ surname +" " + "this person" +" "+ age+" "+"is years old";
+//string concat
+//string message= name +" "+ surname +" " + "this person" +" "+ age+" "+"is years old";
+//string interpolitian
+string message= $"{name} {surname} this person {age} is years old";
 Console.WriteLine(message);
