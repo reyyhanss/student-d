@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*dosya okuma fgetc()ile teker teker alma ve içeriğini görüntüleme*/
+//EOF NE OLDUĞUNU BİLMİYOR C CODE
+
+int main()
+{
+    /*dosyamızın referansını tutan işaretçi*/
+    FILE *fPtr;
+    char character;
+    //read oku modunu aç
+    fPtr=fopen("dosya1.txt","r");
+    //fopen() başarısız ise null döner
+    if(fPtr== NULL){
+        printf("dosya okunamadı.\n");
+        printf("dosyanın ilgili konumda olup olmadığını veya erişim yetkinizin olup olmadığını kontrol edin.");
+        exit(EXIT_FAILURE);
+    }
+    //DOSYA AÇILDIYSA
+    printf("Dosya başarıyla açıldı...okunuyor\n\n");
+    do{
+        //dosyadan karakter oku
+        character=fgetc(fPtr);
+        //dosyadan okuduğun karakteri konsola yazdır
+        putchar(character);
+    }while(character != EOL);/*EOL(END OF FİLE)*/
+    //işimiz bitti
+    fclose(fPtr);
+
+    return 0;
+}
