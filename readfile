@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define VERI_BOYUTU 1000
+
+
+int main()
+{
+    //veri boyutunu hesaplayan karakter dizisi
+    char veri[VERI_BOYUTU];
+    //file pointer to hold reference to our file
+    FILE *fPtr ;
+    fPtr=fopen("dosya1.txt","w+");
+    if(fPtr== NULL){
+       printf("Dosya Olusturulamadı"),
+        exit(EXIT_FAILURE);
+       }
+       //dosyaya girilcek veriyi alır
+       printf("Dosyaya eklenecek bilgiyi girin: \n");
+       fgets(veri,VERI_BOYUTU,stdin);
+       //veriyi dosyaya yazdırır
+       fputs(veri, fPtr);
+       //dosyayı kapat
+       fclose(fPtr);
+       //başarı mesajı yaz
+       printf("dosya basariyla olusturuldu");
+    return 0;
+}
