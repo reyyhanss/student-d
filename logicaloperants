@@ -1,0 +1,24 @@
+
+//yası 18 den buyuk ya da veli izni varsa çalışabilir olduğunu kontrol et
+//ders notu 50-100 arasındaysa gecti kalma durumu kontrol
+//bir iş yerine girmek için önlisan ya da lisans olup olmama kosul kontrol.sigara içmeme kontrol.
+/*Console.WriteLine("yasinizi girin: ");
+bool veli_izin=true;
+
+var yas= Convert.ToInt32(Console.ReadLine());
+
+
+var sonuc=(yas>=18 || veli_izin) ?"işe girebilir":"işe giremez";
+Console.WriteLine(sonuc);*/
+/*Console.Write ("ders notunuzu girin:");
+var not=Convert.ToInt32(Console.ReadLine());
+var sonuc=(not>=50)?"dersten geçtiniz tebrikler":"maalesf kaldiniz";
+Console.WriteLine(sonuc);*/
+string egitim = "lise";
+bool sigara_icme= true;
+var sonuc=(egitim=="lise"||egitim=="onlisans")&& (!sigara_icme)?"işe alınabilir":"işe giremez";
+Console.WriteLine(sonuc);
+
+
+
+
