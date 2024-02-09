@@ -1,0 +1,31 @@
+//if else uygylamaları
+
+Console.Write("1.sayi girin: ");
+var sayi1=Convert.ToInt32(Console.ReadLine());
+
+Console.Write("2.sayi girin: ");
+var sayi2=Convert.ToInt32(Console.ReadLine());
+
+Console.Write("birini seciniz: +(toplama),-(çikarma),*(çarpma),/(bölme)");
+var secim=Console.ReadLine();
+
+double sonuc=0;
+bool ok=true;
+if(secim =="+"){
+ sonuc=sayi1+sayi2;
+}
+else if(secim=="-"){
+     
+     sonuc=sayi2-sayi1;
+     }
+else if(secim=="*"){
+     sonuc=sayi1*sayi2;
+}else if(secim == "/"){
+    sonuc=sayi1/sayi2;
+}else{
+    ok=false;
+    Console.WriteLine("yanliş secim!");
+}
+if(ok){
+Console.WriteLine($"işlem sonucunuz {sayi1}{secim}{sayi2}={sonuc}");
+}
