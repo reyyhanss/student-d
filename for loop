@@ -1,0 +1,48 @@
+//konntrol degişkeni
+//kontrol
+//güncellenmesi
+/*for(var i=1;i<=10;i++){
+    Console.WriteLine("Hello world");
+}*/
+//1 ile 100 arasındaki sayıların toplamı
+/*var toplam=0;
+for (int i=1; i<=100; i++)
+{
+    toplam+=i;
+}
+    Console.WriteLine(toplam);*/
+
+//klavyeden girilen bitiş ve başlangıç degerleri arasındaki tüm degerlerin toplam
+
+// Console.Write("baslangic degeri girin: ");
+// var baslangic=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("biis degeri girin: ");
+// var bitis=Convert.ToInt32(Console.ReadLine());
+
+
+// Console.Write("artis degeri girin: ");
+// var artis=Convert.ToInt32(Console.ReadLine());
+
+// var toplam=0;
+// for(int i=baslangic; i <=bitis;i=i+artis){
+//     toplam+=i;
+// }
+// Console.Write(toplam);
+
+//{"ali","ahmet","can","yelda","seda"}dzisindeki tum elemanmları ekrana yazdırın
+// string[] isimler={"ali","ahmet","can","yelda","seda","eda","selim"};
+
+// for(var i=0;i<isimler.Length;i++){
+//     Console.WriteLine(isimler[i]);
+// }
+
+
+//{1,3,4,34,41,56,89}dizisindeki elemanlardan hangisi 3un katıdır?
+int[] dizi={1,3,4,34,41,56,89,93};
+
+for(var i=0;i<dizi.Length;i++){
+    if(dizi[i] %3==0){
+        Console.WriteLine(dizi[i]);
+    }
+}
