@@ -1,0 +1,32 @@
+//random sayı tahmin etme oyunu
+
+var rnd=new Random();
+int tutulan=rnd.Next(1, 100);
+int hak=3;
+
+while(hak>0){
+    Console.WriteLine(tutulan);
+
+    Console.WriteLine("tahmin giriniz: ");
+    int secim=Convert.ToInt32(Console.ReadLine());
+
+    hak--;
+    if(secim == tutulan){
+        Console.WriteLine("tebrikler bildiniz.");
+        break;
+}
+    else{
+        if(hak==0){
+            Console.WriteLine("oyun bitti");
+            break;
+        }
+        if(secim>tutulan){
+            Console.WriteLine("asagi ");
+        }
+    else{
+        if(secim<tutulan){
+            Console.WriteLine("yukari");
+        }
+    }
+    }
+}
