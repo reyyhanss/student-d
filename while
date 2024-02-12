@@ -1,0 +1,14 @@
+//while
+var secim="e";
+var sayac=1;
+var toplam=0;
+while(secim=="e"){
+    Console.Write($"{sayac} sayi: ");
+    toplam+=Convert.ToInt32(Console.ReadLine());
+    
+    Console.Write("devam etmek istiyor musunuz? (e/h)");
+    secim=Console.ReadLine();
+
+    sayac++;
+}
+Console.WriteLine($"{sayac-1} adet sayinin toplami: {toplam}");
