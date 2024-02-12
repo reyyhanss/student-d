@@ -1,0 +1,7 @@
+Console.Write("sayi girin:");
+var sayi=Convert.ToInt32(Console.ReadLine());
+
+var sonuc = (sayi % 2 == 0)?
+     (sayi>0) ? "sayi cift ve pozitif":"sayi cift negatif":
+     (sayi<0)? "sayi tek ve negatif":"sayi tek ve pozitif";
+Console.WriteLine(sonuc);
