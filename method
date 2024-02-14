@@ -1,0 +1,36 @@
+using System;
+
+namespace ConsoleApp {
+     class Program
+    {
+        static void Main(string[] args)
+        {
+          
+            //class=> object(ogr1,ogr2)
+            Ogrenci ogr1= new Ogrenci() { AdSoyad="Reyhan Gökmen",OgrenciNo="164",Sube="1/B"};
+            Ogrenci ogr2= new Ogrenci() { AdSoyad="Cansu Gökmen",OgrenciNo="264",Sube="3/B"};
+            Ogrenci ogr3= new Ogrenci() { AdSoyad="Ayşe Gökmen",OgrenciNo="864",Sube="7/B"};
+
+            Ogrenci[] ogrenciler= new Ogrenci[3]{ogr1,ogr2,ogr3};
+
+           
+            foreach(var ogrenci in ogrenciler){
+              Console.WriteLine(ogrenci.BilgileriYazdir());
+            }  
+        }
+
+    }
+     class Ogrenci{
+      //propert=> string,int
+      public string AdSoyad { get; set; }
+      public string OgrenciNo { get; set; }
+      public string Sube { get; set; }
+      //method=> bilgileriyazdir()
+      public string BilgileriYazdir()
+      {
+        return $"{this.OgrenciNo} numarali ögrencinin adi {this.AdSoyad} ve subesi {this.Sube}";
+      }
+  }
+
+}
+    
