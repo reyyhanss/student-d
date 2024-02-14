@@ -1,0 +1,43 @@
+namespace ConsoleApp {
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            //class=> object(ogr1,ogr2)
+            Ogrenci ogr1= new Ogrenci();
+            ogr1.AdSoyad="Reyhan Gökmen";
+            ogr1.OgrenciNo="164";
+            ogr1.Sube="1/B";
+
+             Ogrenci ogr2= new Ogrenci();
+            ogr2.AdSoyad="Cansu Gökmen";
+            ogr2.OgrenciNo="264";
+            ogr2.Sube="3/B";
+
+             Ogrenci ogr3= new Ogrenci();
+            ogr3.AdSoyad="Ayşe Gökmen";
+            ogr3.OgrenciNo="864";
+            ogr3.Sube="7/B";
+
+           /* Console.WriteLine($"{ogr1.OgrenciNo} numarali ögrencinin adı {ogr1.AdSoyad} ve subesi {ogr1.Sube}");
+            Console.WriteLine($"{ogr2.OgrenciNo} numarali ögrencinin adı {ogr2.AdSoyad} ve subesi {ogr2.Sube}");
+            Console.WriteLine($"{ogr3.OgrenciNo} numarali ögrencinin adı {ogr3.AdSoyad} ve subesi {ogr3.Sube}");*/
+            Ogrenci[] ogrenciler= new Ogrenci[3];
+            ogrenciler[0]=ogr1;
+            ogrenciler[1]=ogr2;
+            ogrenciler[2]=ogr3;
+            foreach(var ogrenci in ogrenciler){
+              Console.WriteLine($"{ogrenci.OgrenciNo} numarali ögrencinin adı {ogrenci.AdSoyad} ve subesi {ogrenci.Sube}");
+            }  
+        }
+     class Ogrenci{
+      //propert=> string,int
+      public string OgrenciNo { get; set; }
+      public string AdSoyad { get; set; }
+      public string Sube { get; set; }
+      //method=> bilgileriyazdir()
+
+        }
+    }
+}
