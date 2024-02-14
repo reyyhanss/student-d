@@ -1,0 +1,36 @@
+using System.IO.Enumeration;
+
+string rootPath= Directory.GetCurrentDirectory();
+
+/*string[] dirs= Directory.GetDirectories(rootPath,"*.exe",SearchOption.AllDirectories);//ana dosyalar konsoldaki
+
+foreach(var dir in dirs){
+    Console.WriteLine(dir);
+}*/
+
+string source_path="Users/reyha/OneDrive/Desktop/consoleApp/img";
+string destination_path="Users/reyha/OneDrive/Desktop/consoleApp/images/";
+
+
+
+string[] files= Directory.GetFiles(source_path,"*",SearchOption.AllDirectories);//içindeki dosyalar
+
+foreach(var file in files){
+    Console.WriteLine(file);
+    Console.WriteLine(Path.GetExtension(file));
+    Console.WriteLine(Path.GetFileNameWithoutExtension(file));
+    Console.WriteLine(Path.GetFileName(file));
+
+  var info= new FileInfo(file);
+
+  Console.WriteLine($"{Path.GetFileName(file)}: {info.Length}");//bilgi almak için daha ayrıntılı
+
+  if(!Directory.Exists(destination_path)){
+       Directory.CreateDirectory(destination_path);//yoksa dosyayı yapabilmek için
+  }
+  string name= Path.GetRandomFileName() +Path.GetExtension(file); //kopyalanan dosyanın adını random yapmak için
+  File.Copy(file, $"{destination_path}{Path.GetFileName(file)}");//kopyalamak için
+}
+
+
+//burdaki img dosyasını bulamadı:(
